@@ -16,16 +16,18 @@ function App() {
         <BrowserRouter>
           <Stack spacing={2}>
             <Appbar />
-            <Box sx={{ flexGrow: 1 }}>
-              <Sidenav />
-              <Box component="main" sx={{ p: 3 }}>
+            <Stack direction="row" spacing={2}>
+              <Box>
+                <Sidenav />
+              </Box>
+              <Box component="main" sx={{ p: 3, mt: "64px" }}>
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/settings" element={<Settings />} />
                 </Routes>
               </Box>
-            </Box>
+            </Stack>
           </Stack>
         </BrowserRouter>
       </Provider>
