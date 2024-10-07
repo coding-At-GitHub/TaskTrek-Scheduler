@@ -16,6 +16,7 @@ inputbox.onkeyup = () => {
 }
 
 var item = [];
+
 // Onclick Event is used to add task in array
 add.onclick = () => {
     item.push(inputbox.value)//Item Add In Array
@@ -47,11 +48,13 @@ function deleteTask(index) {
     item.splice(index, 1);//remove element from array
     showcase();
 }
+
 // delete all tasks function is used for delete all task from your list
 clearall.onclick = () => {
     item = []; //empty the array
     showcase();
 }
+
 // Clear Completed is used for which task complete delete from list.
 document.querySelector('.clearcomtask').onclick = () => {
     var inputElems = document.querySelectorAll(".checkinput"); // Select selected task in list
